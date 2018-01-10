@@ -12,18 +12,34 @@ html, body, #maincontainer {
     width: 100%;
 }
 
+.directionsItem {
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 35px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+}
+
+.directionsSelected {
+  font-weight: bold;
+}
+
+.directionsItem:hover {
+  font-weight: bold;
+}
+
 #directionsInput {
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-top: 10px;
   background-color: #4285F4 !important;
 }
 #directionsInputTwo {
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
   background-color: #3367D6 !important;
 }
 
@@ -42,12 +58,6 @@ html, body, #maincontainer {
   width: 27%;
   height: 100%;
   float: left;
-}
-
-#directionsbar {
-  height: 100px;
-  overflow:scroll;
-  background-color: purple;
 }
 
 /* label color */

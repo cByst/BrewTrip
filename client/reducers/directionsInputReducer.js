@@ -5,6 +5,7 @@ export default function reducer(state={
     focus: null,
     autocomplete: null,
     fetchingAutoComplete: false,
+    route: null,
   }, action) {
 
     switch (action.type) {
@@ -22,6 +23,9 @@ export default function reducer(state={
       }
       case "FETCH_AUTOCOMPLETE": {
         return {...state, fetchingAutoComplete: true}
+      }
+      case "SET_ROUTE": {
+        return {...state, route: action.payload}
       }
     }
     return state

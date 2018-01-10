@@ -19,7 +19,10 @@ const MyMapComponent = compose(
   if (props.directions) {
     console.log(props.directions.routes.length);
     for(var i = 0; i < props.directions.routes.length; i++) {
-      DirectionsRend.push(<DirectionsRenderer key={i+1} hideRouteList={true} directions={props.directions} routeIndex={i} options={{polylineOptions: {strokeColor: 'grey',strokeOpacity: 0.6, strokeWeight: 5}}}/>);
+      console.log(props.route === i);
+      (props.route === i) ? 
+      DirectionsRend.push(<DirectionsRenderer key={i+1} hideRouteList={true} directions={props.directions} routeIndex={i} options={{polylineOptions: {strokeColor: 'grey',strokeOpacity: 0.6, strokeWeight: 5}}}/>) 
+      : DirectionsRend.push(<DirectionsRenderer key={i+1} hideRouteList={true} directions={props.directions} routeIndex={i} options={{polylineOptions: {strokeColor: 'green',strokeOpacity: 0.6, strokeWeight: 5}}}/>);
     };
     console.log(DirectionsRend);
   }
@@ -39,7 +42,7 @@ export default class MapContainer extends React.Component {
   render() {
     return (
       <MyMapComponent 
-        directions={this.props.directions} />
+        directions={this.props.directions} route={this.props.route} />
     );
   }
 }

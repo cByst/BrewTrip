@@ -13,6 +13,7 @@ import { connect } from "react-redux";
       fetched: store.map.fetched,
       error: store.map.error,
       focus: store.directions.focus,
+      route: store.directions.route,
     };
   })
 export default class MainContainer extends React.Component {
@@ -22,12 +23,12 @@ export default class MainContainer extends React.Component {
                 <div id={"sidebar"} className={"w3-card"}>
                     <DirectionsInput />
                     {(this.props.directions)
-                    ? (<div><Directions directions={this.props.directions} />
+                    ? (<div><Directions />
                       <Breweries /></div>)
                     : (this.props.fetching) ? (<div className={"dots-loader"}></div>) : (<div></div>)}
                 </div>
                 <div id={"maincontainer"}>
-                    <MapContainer directions={this.props.directions} dispatch={this.props.dispatch} />
+                    <MapContainer directions={this.props.directions} dispatch={this.props.dispatch} route={this.props.route} />
                 </div>
             </div>
         );

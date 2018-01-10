@@ -41,7 +41,7 @@ export default class DirectionsInput extends React.Component {
                     </div>
                 </div>
                 <div style={{display: 'flex', justifyContent: 'flex-end'}} id={"directionsInputTwo"}>                      
-                    <a class="btn-floating btn-large waves-effect waves-light red" onClick={() => this.props.dispatch(fetchDirections(this.props.from,this.props.to))} ><i class="material-icons">search</i></a>
+                    <a class="btn-floating btn-medium waves-effect waves-light red" onClick={() => this.props.dispatch(fetchDirections(this.props.from,this.props.to))} ><i class="material-icons">search</i></a>
                 </div>
             </form>
         );

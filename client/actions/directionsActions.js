@@ -26,6 +26,13 @@ export function setFocus(focus) {
     }
 }
 
+export function setRoute(routeId) {
+    return {
+        type: 'SET_ROUTE',
+        payload: routeId,
+    }
+}
+
 // export function autoComplete(text) {
 //     return function(dispatch) {
 //       dispatch({type: "FETCH_DIRECTIONS"}); 
