@@ -3,7 +3,7 @@ A Express/React/Redux app that uses the google maps api to help you find all of 
 
 1. git clone the repo: https://github.com/cByst/BrewTrip.git 
 2. Run "npm install" to install
-3. Create config.js in the route directory that looks like:
+3. Create config.js in the root directory that looks like:
     ```javascript
     const config = {
         googlemapskey: "GoogleMapsApiKeyHere",
